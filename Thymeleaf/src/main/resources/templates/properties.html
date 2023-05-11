@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of Properties</title>
+    <link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+    <h1>List of Properties</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Property ID</th>
+                <th>Copay</th>
+                <th>Medical Guide</th>
+                <th>Internation</th>
+                <th>Doctor to Home</th>
+                <th>Odontology</th>
+                <th>Orthodontics</th>
+                <th>Refund</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="property : ${properties}">
+                <td th:text="${property.properId}"></td>
+                <td th:text="${property.copay}"></td>
+                <td th:text="${property.medicalGuide}"></td>
+                <td th:text="${property.internation}"></td>
+                <td th:text="${property.doctorToHome}"></td>
+                <td th:text="${property.odontology}"></td>
+                <td th:text="${property.orthodontics}"></td>
+                <td th:text="${property.refund}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
